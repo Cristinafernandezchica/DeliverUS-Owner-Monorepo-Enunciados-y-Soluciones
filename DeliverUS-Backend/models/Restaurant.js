@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
         'temporarily closed'
       ]
     },
+    // SOLUTION
     sortByPrice: {
       type: DataTypes.BOOLEAN,
       defaltValue: false

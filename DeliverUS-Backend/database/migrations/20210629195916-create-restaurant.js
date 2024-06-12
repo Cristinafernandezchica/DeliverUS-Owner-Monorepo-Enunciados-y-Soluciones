@@ -57,6 +57,7 @@ module.exports = {
         ],
         defaultValue: 'offline'
       },
+      // SOLUTION
       sortByPrice: {
         type: Sequelize.BOOLEAN,
         defaltValue: false

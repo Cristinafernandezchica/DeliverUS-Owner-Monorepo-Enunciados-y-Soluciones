@@ -5,6 +5,7 @@ const Product = models.Product
 const RestaurantCategory = models.RestaurantCategory
 const ProductCategory = models.ProductCategory
 
+// SOLUTION
 exports.toggleProductsSorting = async function (req, res) {
   try {
     const restaurant = await Restaurant.findByPk(req.params.restaurantId)
@@ -66,6 +67,7 @@ exports.create = async function (req, res) {
   }
 }
 
+// SOLUTION
 exports.show = async function (req, res) {
   // Only returns PUBLIC information of restaurants
   try {

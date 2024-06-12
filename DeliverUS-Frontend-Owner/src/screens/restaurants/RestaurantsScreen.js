@@ -26,6 +26,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
     }
   }, [loggedInUser, route])
 
+  // SOLUTION
   const toggleRestaurantProductsOrder = async (restaurant) => {
     try {
       const modifiedRestaurant = await toggleProductsSorting(restaurant.id)
@@ -62,6 +63,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
           <TextSemiBold>Avg. service time: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.averageServiceMinutes} min.</TextSemiBold></TextSemiBold>
         }
         <TextSemiBold>Shipping: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.shippingCosts.toFixed(2)}€</TextSemiBold></TextSemiBold>
+        {/* SOLUTION */}
         <TextRegular textStyle={{ textAlign: 'right' }}>Currently sorting products<TextSemiBold> by {item.sortByPrice ? 'price' : 'default'}</TextSemiBold></TextRegular>
 
         <View style={styles.actionButtonsContainer}>
@@ -102,6 +104,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
             </View>
           </Pressable>
 
+          {/* SOLUTION */}
           <Pressable
             onPress={ async () => await toggleRestaurantProductsOrder(item) }
             style={() => [
@@ -235,7 +238,7 @@ const styles = StyleSheet.create({
     padding: 10,
     alignSelf: 'center',
     flexDirection: 'column',
-    width: '33%'
+    width: '33%' //
   },
   actionButtonsContainer: {
     flexDirection: 'row',

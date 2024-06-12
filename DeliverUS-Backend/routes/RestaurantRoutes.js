@@ -55,6 +55,7 @@ module.exports = (options) => {
       middlewares.checkRestaurantOwnership,
       RestaurantController.destroy)
 
+  // SOLUTION
   app.route('/restaurants/:restaurantId/toggleProductsSorting')
     .patch(
       middlewares.isLoggedIn,

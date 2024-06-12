@@ -23,6 +23,7 @@ function remove (id) {
   return destroy(`restaurants/${id}`)
 }
 
+// SOLUTION
 function toggleProductsSorting (id) {
   return patch(`restaurants/${id}/toggleProductsSorting`)
 }
